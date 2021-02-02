@@ -274,6 +274,10 @@ public ByteBuf setBytes(int index, byte[] src, int srcIndex, int length) {
 
 
 
+<!--more-->
+
+
+
 # 读出数据
 
 从buf中把刚才写入的数据（”瓜农“）读出来，通过工具类ByteBufUtil.readBytes来实现。

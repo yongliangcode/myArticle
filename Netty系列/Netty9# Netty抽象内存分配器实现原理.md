@@ -180,6 +180,10 @@ private static Component[] newCompArray(int initComponents, int maxNumComponents
 
 
 
+<!--more-->
+
+
+
 # CompositeByteBuf实现原理
 
 下面通过例子来体验一把CompositeByteBuf，先直观感受下。

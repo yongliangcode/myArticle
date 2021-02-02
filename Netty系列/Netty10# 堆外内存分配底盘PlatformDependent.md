@@ -105,6 +105,10 @@ date: 2021-01-30 22:47:01
 
 
 
+<!--more-->
+
+
+
 ### 重要方法走查
 
 PlatformDependent0提供的方法，主要判断Unsafe是否可用、Unsafe分配堆外内存、Unsafe从堆外内存获取数据等。下面挑几个走查下。

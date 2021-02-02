@@ -61,6 +61,12 @@ ReflectiveChannelFactory提供了newChannel()方法通过反射实例化。
 
 ![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210202190011.png)
 
+
+
+<!--more-->
+
+
+
 # 三、实例化过程
 
 

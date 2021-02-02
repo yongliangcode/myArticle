@@ -155,6 +155,10 @@ System.out.println((executionMask & (onlyMask | mask))==0);
 
 
 
+<!--more-->
+
+
+
 ### Inbound传递过程
 
 以上一篇文章 [Netty6# Netty之事件轮询与处理](https://mp.weixin.qq.com/s/rcVDX0tNMhRGchjYHddARw) 当有新的客户端的连接时触发unsafe.read()执行。具体为NioMessageUnsafe#read()方法。具体为上文中**注解@17**。

@@ -255,6 +255,12 @@ private void processSelectedKeys() {
 
 小结：就绪事件的轮询SingleThreadEventExecutor#run方法负责，不断轮询就绪事件集合publicSelectedKeys，来判断是否有就绪事件。
 
+
+
+<!--more-->
+
+
+
 ## 三、事件处理
 
 ```java
