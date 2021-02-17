@@ -23,6 +23,10 @@ nettyServerConfig.setListenPort(9876)
 
 \* 每10秒钟扫描一次，移除失效的broker，同时移除缓存元数据
 
+
+
+<!--more-->
+
 ```
 //初始化NameServer
 

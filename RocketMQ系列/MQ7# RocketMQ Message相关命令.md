@@ -41,7 +41,7 @@ broker-b             0   true          4
 -s size message size | default 128 Byte
 ```
 
-
+<!--more-->
 
 # print message by queue
 
@@ -207,7 +207,7 @@ See [http://rocketmq.apache.org/docs/faq/](http://rocketmq.apache.org/docs/faq/)
 "o", "offset", true, "Queue Offset"
 ```
 
-<!--more-->
+
 
 # 通过UniqueKey查询消息内容
 

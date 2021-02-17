@@ -15,6 +15,12 @@ date: 2020-12-20 20:14:01
 压测结果显示集群几乎无法使用，TPS居然是个位数，客户端也在报错。
 ```
 
+
+
+<!--more-->
+
+
+
 ## 压测日志
 
 ![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20201218231410.png)
@@ -72,8 +78,6 @@ JAVA_OPT="${JAVA_OPT} -server -Xms8g -Xmx8g -Xmn4g"
 ![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20201218231833.png)
 
 
-
-<!--more-->
 
 
 

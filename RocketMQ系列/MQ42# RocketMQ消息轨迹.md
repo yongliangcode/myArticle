@@ -47,7 +47,7 @@ this.topicConfigTable.put(topicConfig.getTopicName(), topicConfig);
 }
 ```
 
-
+<!--more-->
 
 # **客户端发送实现**
 

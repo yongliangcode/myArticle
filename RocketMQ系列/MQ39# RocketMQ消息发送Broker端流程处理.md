@@ -17,6 +17,8 @@ processRequest方法主要三件事情：
 
 3.处理单条消息发送
 
+<!--more-->
+
 ```
 @Override
 

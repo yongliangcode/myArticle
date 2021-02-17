@@ -25,6 +25,10 @@ bin/mqadmin deleteTopic -n localhost:9876 -t zto-example -c DefultCluster
 
 
 
+<!--more-->
+
+
+
 # 获取topic的cluster
 
 ```
@@ -233,7 +237,7 @@ update topic perm from 2 to 6 in 192.168.1.x:10911 success.
 
 
 
-<!--more-->
+
 
 
 

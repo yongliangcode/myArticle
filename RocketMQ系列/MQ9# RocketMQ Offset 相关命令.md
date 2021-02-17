@@ -21,6 +21,10 @@ clone group offset success. srcGroup[SCANRECORD_GROUP], destGroup=[my-tst-cloneo
 
 
 
+<!--more-->
+
+
+
 # 验证
 
 ```
@@ -56,8 +60,6 @@ SCANRECORD zms_syncer_SCANRECORD 286 3063.95 3063.73 233588408 233588419
 ```
 
 
-
-<!--more-->
 
 
 

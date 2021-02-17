@@ -17,7 +17,7 @@ Topic的创建分为自动创建和通过命令行创建两种。通过broker配
 sh bin/mqadmin updateTopic -c DefaultCluster -n localhost:9876 -t threezto-test -r 12 -w 12
 ```
 
-
+<!--more-->
 
 # 客户端发起Topic创建请求
 

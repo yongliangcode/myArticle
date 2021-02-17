@@ -33,6 +33,10 @@ date: 2020-12-20 20:40:01
 
 
 
+<!--more-->
+
+
+
 # 日志映射相关类初始化
 
 在Broker启动时实例化了两个类DefaultMessageStore和AllocateMappedFileService。

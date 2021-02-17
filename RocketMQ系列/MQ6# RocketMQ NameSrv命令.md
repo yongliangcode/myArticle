@@ -51,6 +51,12 @@ serverOnewaySemaphoreValue = 256
 configStorePath = /home/baseuser/namesrv/namesrv.properties
 ```
 
+
+
+<!--more-->
+
+
+
 # 删除nameSrv配置
 
 ```
@@ -62,10 +68,6 @@ Delete KV config.
 
 -k key set the key name
 ```
-
-
-
-<!--more-->
 
 
 

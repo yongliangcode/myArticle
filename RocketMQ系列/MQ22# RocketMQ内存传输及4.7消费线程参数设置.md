@@ -11,7 +11,7 @@ date: 2020-12-20 20:19:01
 
 RocketMQ配置中有一个设置项为transferMsgByHeap，即是否通过堆内存传输数据。在文章“RocketMQ存储--同步刷盘和异步刷盘”中对其进行过梳理。那transferMsgByHeap是开启好呢？还是关闭好！第二个问题是可以设置消费的线程数，由于无界队列所以只需要设置最小线程数consumeThreadMin即可，那在rocket-client4.7版本中还能这么用吗？
 
-
+<!--more-->
 
 # transferMsgByHeap误解
 

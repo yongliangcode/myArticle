@@ -13,6 +13,10 @@ date: 2020-12-26 11:55:01
 
 
 
+<!--more-->
+
+
+
 # 事件传递过程
 
 ChannelPipeline随着Channel的创建而创建，在 [Netty2# Netty组件之Channel初始化 ](https://mp.weixin.qq.com/s/tvy0j0Mo9H82SK4jztqu0w) 文章中梳理了ChannelPipeline、ChannelHandlerContext、ChannelHandler的关系如下图。
@@ -152,10 +156,6 @@ System.out.println((executionMask & (onlyMask | mask))==0);
 
 
 **小结：** outBound事件在ChannelPipeline中传递时，只会选择身份为outBound的ChannelHandlerContext执行。
-
-
-
-<!--more-->
 
 
 

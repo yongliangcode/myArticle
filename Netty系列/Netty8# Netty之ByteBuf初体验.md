@@ -14,6 +14,10 @@ date: 2021-01-02 11:55:01
 
 
 
+<!--more-->
+
+
+
 # 基本概念
 
 **ByteBuf创建**
@@ -273,8 +277,6 @@ public ByteBuf setBytes(int index, byte[] src, int srcIndex, int length) {
 在写入数据时，判断剩余容量是否足够；不够则需要扩容，如果写入的数据小于4M，则双倍增长，直到容纳写写入的数据。如果写入的数据大于4M，通过（minNewCapacity / threshold * threshold）计算需要扩容的大小。
 
 
-
-<!--more-->
 
 
 

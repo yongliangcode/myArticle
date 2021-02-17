@@ -14,6 +14,10 @@ date: 2021-01-16 11:55:01
 
 
 
+<!--more-->
+
+
+
 # 内存分配器概览
 
 **堆外内存&堆内存** 
@@ -180,7 +184,7 @@ private static Component[] newCompArray(int initComponents, int maxNumComponents
 
 
 
-<!--more-->
+
 
 
 

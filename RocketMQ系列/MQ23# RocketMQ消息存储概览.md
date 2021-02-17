@@ -27,6 +27,10 @@ PutMessageResult putMessageResult = this.brokerController.getMessageStore().putM
 
 
 
+<!--more-->
+
+
+
 流程图
 
 ![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20201219132807.png)

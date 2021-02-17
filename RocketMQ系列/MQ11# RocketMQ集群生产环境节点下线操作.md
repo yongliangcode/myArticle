@@ -37,6 +37,10 @@ update broker config success, 192.168.x.x:10911
 
 
 
+<!--more-->
+
+
+
 # 观察节点流量
 
 ```
@@ -70,10 +74,6 @@ ZmsClusterA broker-d 1 192.168.x.x:10915 V4_1_0_SNAPSHOT 2026.50(0,0ms) 0.00(0,0
 观察InTPS和OutTPS，理想情况都为零时，并不再变化时，则该节点可下线了。
 
 然而，在实际过程中并没有出现为零的情况，InTPS和OutTPS总是有值，有时个位数字有时是两位数字，大部分时间在20多的值。此刻要分析下broker目前的消费状态。
-
-
-
-<!--more-->
 
 
 

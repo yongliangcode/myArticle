@@ -37,7 +37,7 @@ System.out.printf("%s%n",sendResult);
 producer.shutdown();
 ```
 
-
+<!--more-->
 
 # 方法启动所做的事情
 

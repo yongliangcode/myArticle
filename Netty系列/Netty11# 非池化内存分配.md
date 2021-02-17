@@ -2,6 +2,7 @@
 title: Netty11# 非池化内存分配
 categories: Netty
 tags: Netty
+abbrlink: f74d0239
 date: 2021-02-10 11:55:01
 ---
 
@@ -12,6 +13,10 @@ date: 2021-02-10 11:55:01
 非池化内存的分配由UnpooledByteBufAllocator负责，本文梳理下由其负责分配的堆内存和堆外内存如何实现的 。
 
 Netty在非池化堆内存分配上Java9与Java8以下版本有啥不同呢？Netty堆外内存回收默认机制使用JDK提供的Cleaner吗？
+
+
+
+<!--more-->
 
 
 
