@@ -85,7 +85,7 @@ private static int validateAndCalculatePageShifts(int pageSize) {
 maxOrder默认大小为11，可以通过-Dio.netty.allocator.maxOrder自定义。
 
 ```java
-int defaultMaxOrder = SystemPropertyUtil.getInt("io.netty.allocator.maxOrder", 11);
+pageSizeint defaultMaxOrder = SystemPropertyUtil.getInt("io.netty.allocator.maxOrder", 11);
 Throwable maxOrderFallbackCause = null;
 try {
   validateAndCalculateChunkSize(DEFAULT_PAGE_SIZE, defaultMaxOrder);
