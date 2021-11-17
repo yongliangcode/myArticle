@@ -26,7 +26,6 @@ date: 2021-05-23 11:55:01
 * 在注册节点时通过向心跳执行器添加心跳任务addBeatInfo触发
 * 心跳执行器通过每隔五秒中向Nacos Server发起HTTP请求
 * 如果返回的server not found会向Nacos Server发起注册请求重新注册
-  
 
 **UDP接受服务端推送** 
 
@@ -55,6 +54,10 @@ date: 2021-05-23 11:55:01
 * 守护线程2同时负责当nacos server的地址信息发生变更时重新与新server建立连接
 * nacos server的地址变更通过grpc通道由server推送ConnectResetRequest到client
 * grpc client只与nacos server集群中一台建立grpc连接。
+
+
+
+<!--more-->
 
 
 

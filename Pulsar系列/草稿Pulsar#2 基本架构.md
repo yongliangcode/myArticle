@@ -17,8 +17,6 @@ https://pulsar.apache.org/docs/zh-CN/admin-api-brokers/
 
 
 
-
-
 ### 集群
 
 由3部分组成

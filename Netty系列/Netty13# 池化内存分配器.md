@@ -36,7 +36,7 @@ PooledByteBufAllocator作为池化内存分配的入口，提供了众多的配�
 | directArenas                             | Arena数组，元素为DirectArena                                 |
 | PooledByteBufAllocatorMetric metric      | 暴露统计指标，例如：用了多少堆内存、用了多少堆外直接内存等   |
 
-
+<!--more-->
 
 
 

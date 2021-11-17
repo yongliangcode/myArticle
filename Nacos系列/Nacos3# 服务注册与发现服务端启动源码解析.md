@@ -35,6 +35,10 @@ date: 2021-06-05 11:55:01
 
 
 
+<!--more-->
+
+
+
 # gRPC Service .proto解读
 
 客户端和服务端通过gRPC通信，基于.proto生成响应的通信代码，那先看看.proto暴露了哪些服务。
@@ -264,7 +268,6 @@ private void addServices(MutableHandlerRegistry handlerRegistry, ServerIntercept
 
 
 **小结：** server启动过程中主要干了三件事 @1定义了拦截器获取客户端的ip、port、connectId等；@2装配了.proto定义的两种调用方式，简单调用方式Request#request和双向流调用方式BiRequestStream#biRequestStream；@3设置了服务启动端口、线程、接受消息的限制、压缩/解压缩类型。
-
 
 
 

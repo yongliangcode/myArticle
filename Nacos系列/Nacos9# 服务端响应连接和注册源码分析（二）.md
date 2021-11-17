@@ -45,7 +45,7 @@ Nacos的CP协议使用Distro，中间穿插了几篇关于该协议的主要逻�
 * 当注册请求到服务端时，发布ClientChangedEvent事件，属性expired为false
 * NamingMetadataManager订阅了该事件主要判断元数据是否过期
 
-
+<!--more-->
 
 # ClientRegisterServiceEvent事件
 

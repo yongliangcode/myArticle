@@ -53,6 +53,10 @@ CAP定理（CAP theorem），又被称作布鲁尔定理（Brewer's theorem）�
 
 
 
+<!--more-->
+
+
+
 # 注册中心
 
 

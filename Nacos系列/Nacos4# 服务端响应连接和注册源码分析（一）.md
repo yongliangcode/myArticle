@@ -40,6 +40,10 @@ date: 2021-06-13 11:55:01
 
 
 
+<!--more-->
+
+
+
 # 加载RequestHandler
 
 com.alibaba.nacos.core.remote#RequestHandlerRegistry实现了ApplicationListener，在spring启动后回调onApplicationEvent。
@@ -472,7 +476,6 @@ public boolean addServiceInstance(Service service, InstancePublishInfo instanceP
 
 
 那谁订阅了这些事件呢？他们又做了啥？下回接着撸。
-
 
 
 
