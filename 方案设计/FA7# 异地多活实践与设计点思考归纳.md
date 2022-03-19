@@ -23,8 +23,9 @@ date: 2022-01-14 11:55:01
 
 推动多活的原因大体可归纳为以下三种。
 
-* 高可用架构部署
 * 业务整体的容灾
+
+* 高可用架构部署
 * 单机房容量限制
 
 
@@ -77,13 +78,13 @@ date: 2022-01-14 11:55:01
 
 **路由因子选择：** 需要根据公司业务场景选择，常见的路由因子有地域、用户ID。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20211228101124.png)
+![](/Users/admin/work/工作参考/架构师大会(2022.04)/AS-2022/图片展示/异地双活/ar大会--路由因子选择.png)
 
 
 
 **路由因子与机房映射：**
 
-地域因子：将地域编号与机房建立映射，例如：001->unit-a
+地域因子：将地域编号与机房建立映射，例如：021->unit-a
 
 用户因子：将UID与机房建立映射，例如：123456与机房编号哈希后映射到unit-a
 
@@ -134,7 +135,7 @@ date: 2022-01-14 11:55:01
 
 
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/RPC%E8%B7%A8%E6%9C%BA%E6%88%BF%E8%B0%83%E7%94%A8%E6%89%A9%E5%B1%95.png)
+![](/Users/admin/work/工作参考/架构师大会(2022.04)/AS-2022/图片展示/异地双活/RPC跨机房调用.png)
 
 
 
@@ -153,7 +154,7 @@ date: 2022-01-14 11:55:01
 
 
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/HMS%E8%B7%A8%E9%9B%86%E7%BE%A4%E5%A4%8D%E5%88%B6-%E4%BA%A4%E4%BA%92%E5%9B%BE.png)
+![](/Users/admin/work/工作参考/架构师大会(2022.04)/AS-2022/图片展示/异地双活/HMS跨集群复制-交互图.png)
 
 
 
@@ -165,7 +166,7 @@ date: 2022-01-14 11:55:01
 * 动态唤醒消费SDK订阅复制流量
 * 复制流量来源机房打标
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/%E8%B7%A8%E6%9C%BA%E6%88%BF%E5%A4%8D%E5%88%B6%E6%96%B01.png)
+![](/Users/admin/work/工作参考/架构师大会(2022.04)/AS-2022/图片展示/异地双活/消息--流量隔离与动态订阅.png)
 
 
 
