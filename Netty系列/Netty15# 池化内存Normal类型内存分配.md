@@ -21,7 +21,7 @@ Netty使用平衡二叉树将申请到的Chunk块组织起来，如下图所示�
 
 
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/Netty%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/Netty%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91.png)
 
 
 
@@ -308,19 +308,19 @@ public class PoolChunkTest {
 
 第一次分配找到了数组memoryMap的下标为2048，此时对应的值为memoryMap[2048]=11。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210314192404.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/20210314192404.png)
 
 
 
 当分配后将该节点标记为不可用，也就是更新为12（总共才11层，所以12为不可用），此时memoryMap[2048]=12。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210314174107.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/20210314174107.png)
 
 
 
 递归整棵树，从下往上更新直到根节点，将父节点更新为其子节点的最小值。例如：memoryMap[1024]的值原来为10，被更新成了11.
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210314195243.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/20210314195243.png)
 
 
 
@@ -330,7 +330,7 @@ public class PoolChunkTest {
 
 先找到了id=2048，这个节点发现其值为12，也就是不可用了。此时memoryMap[2049]=11。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210314185849.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/20210314185849.png)
 
 
 
@@ -342,13 +342,13 @@ public class PoolChunkTest {
 
 将节点id=2049设置为不可用，即：memoryMap[2049]=12。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210314200044.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/20210314200044.png)
 
 
 
 递归更新整棵树，由于其父节点的两个子节点都被分配出去了，所以1024被标记为不可用。memoryMap[1024]=12。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210314200415.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/20210314200415.png)
 
 
 
@@ -356,19 +356,19 @@ public class PoolChunkTest {
 
 第三次分配8KB时，当循环到了节点1024，发现其不可用，也就是其子节点也不可用了。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210314192117.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/20210314192117.png)
 
 
 
 通过id <<= 1找到1024的兄弟节点1025，接着向下查找。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210314191633.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/20210314191633.png)
 
 
 
 找到节点1025的子节点2050发现其可用，即：memoryMap[2050]=11。找到后最后过程同上，标记其不可用表示已分配了，并更新整个树把其父节点更新为子节点的最小值。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210314190313.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/20210314190313.png)
 
 
 
@@ -384,7 +384,7 @@ public class PoolChunkTest {
 
 
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%88%86%E9%85%8D.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%88%86%E9%85%8D.png)
 
 
 
@@ -396,7 +396,7 @@ public class PoolChunkTest {
 
 
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%88%86%E9%85%8D%E5%90%8E.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%88%86%E9%85%8D%E5%90%8E.png)
 
 
 
@@ -408,7 +408,9 @@ public class PoolChunkTest {
 
 
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/%E7%AC%AC%E4%BA%8C%E6%AC%A18KB%E5%88%86%E9%85%8D%E5%90%8E.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/%E7%AC%AC%E4%BA%8C%E6%AC%A18KB%E5%88%86%E9%85%8D%E5%90%8E.png)
+
+
 
 ### 第三次分配8KB后
 
@@ -416,5 +418,5 @@ public class PoolChunkTest {
 
 第三次分配8KB后，将第11层的第三个节点memoryMap[2050]标记为不可用，同时更新其父节点memoryMap[1025]为子节点最小值11。整个树会继续向上递归变化，将整个树父节点更新为子节点最小的值。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/%E7%AC%AC%E4%B8%89%E6%AC%A18KB%E5%88%86%E9%85%8D%E5%90%8E.png)
+![](https://raw.githubusercontent.com/laoliangcode/md-picture/raw/master/img/%E7%AC%AC%E4%B8%89%E6%AC%A18KB%E5%88%86%E9%85%8D%E5%90%8E.png)
 

@@ -39,7 +39,7 @@ date: 2021-04-10 18:25:01
 
 
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/subpages%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84.png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/subpages%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84.png)
 
 
 
@@ -93,7 +93,7 @@ private long allocateSubpage(int normCapacity) {
 
 **注解@1** 从tinySubpagePools中获取PoolSubpage。获取过程为elemSize >>> 4（除以16）来获取。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210403195729.png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/20210403195729.png)
 
 
 
@@ -101,7 +101,7 @@ private long allocateSubpage(int normCapacity) {
 
 tinySubpagePools被初始化成长度为32的数组，元素之间差额为16B。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/tinySubpagePools%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E6%96%B0.png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/tinySubpagePools%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E6%96%B0.png)
 
 **注解@2** allocateNode 在上一篇文章分析过，d = maxOrder = 1。表示在平衡二叉树的第11层找到可分配的节点，具体为memoryMap数组中的下标。如果整个树都没有内存可分配了，返回的id=-1。
 
@@ -119,7 +119,7 @@ subpages = newSubpageArray(maxSubpageAllocs);
 
 例如：平衡二叉树第11层第1个节点数组下标为2048，转换为subpages的下标为0，平衡二叉树第11层第2个节点数组下标为2049，转换为subpages的下标为1，平衡二叉树第11层第2个节点数组下标为2050，转换为subpages的下标为2。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E5%88%86%E5%B8%83%20(1).png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E5%88%86%E5%B8%83%20(1).png)
 
 
 
@@ -183,7 +183,7 @@ void init(PoolSubpage<T> head, int elemSize) {
 
 **备注：** 此处不太好理解为什么要maxNumElems要除以64来计算bitmap的长度呢？也就是bitmap数组中的每个元素可以标记64个被切的内存块。bitmap是long数组，每个long类型是64位，他用每个二进制位来标记被切内存块的分配情况。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/bitmap%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D%E5%88%9D%E5%A7%8B%E5%8C%96%E7%8A%B6%E6%80%81%20(1).png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/bitmap%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D%E5%88%9D%E5%A7%8B%E5%8C%96%E7%8A%B6%E6%80%81%20(1).png)
 
 **加入链表** 
 
@@ -203,7 +203,7 @@ private void addToPool(PoolSubpage<T> head) {
 
 
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/subpages%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%20(2).png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/subpages%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%20(2).png)
 
 
 
@@ -222,27 +222,27 @@ public void testAllocateSubpage() {
 
 **第一次分配**
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210410194035.png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/20210410194035.png)
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210410195035.png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/20210410195035.png)
 
 
 
 **第二次分配**
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210410200757.png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/20210410200757.png)
 
 第一次轮询第一位已被占用，需要向右移位。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210410201041.png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/20210410201041.png)
 
 第二次轮询第二位未被占用。
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210410201407.png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/20210410201407.png)
 
 第二次分配过程
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/20210410202216.png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/20210410202216.png)
 
 
 
@@ -252,10 +252,10 @@ public void testAllocateSubpage() {
 
 此时64位第一位被标记为1，bitmap[0] = 1
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D.png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D.png)
 
 **第二次分配128B图示**
 
 此时64位第二位也被标记为1，bitmap[0] = 3
 
-![](https://gitee.com/laoliangcode/md-picture/raw/master/img/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%20(1).png)
+![](https://raw.githubusercontent.com/yongliangcode/md-picture/master/img/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%20(1).png)
